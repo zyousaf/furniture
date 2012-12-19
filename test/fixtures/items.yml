@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  type: 
+  color: MyString
+  brand: MyString
+  condition: MyString
+  date_available: 2012-12-16
+  time_available: 2012-12-16 19:20:50
+  user_id: 1
+
+two:
+  name: MyString
+  type: 
+  color: MyString
+  brand: MyString
+  condition: MyString
+  date_available: 2012-12-16
+  time_available: 2012-12-16 19:20:50
+  user_id: 1

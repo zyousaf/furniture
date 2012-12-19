@@ -1,4 +1,8 @@
 Furniture::Application.routes.draw do
+  resources :items
+  resources :users
+  root :to => 'static_pages#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,29 @@
+<div class="hero-unit">
+  <h1>I want to find a...red...couch</h1>
+</div>
+
+  <%= form_tag items_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<% @items.each do |item| %>
+<div class="row">
+  <ul class="thumbnails">
+    <li><b>Name:</b> <%= item.name %></li>
+    <li><b>Type:</b> <%= item.item_type %></li>
+    <li><b>Color:</b> <%= item.color %></li>
+    <li><b>Brand:</b> <%= item.brand %></li>
+    <li><b>Condition:</b> <%= item.condition %></li>
+    <li><b>Date Available Until:</b> <%= item.date_available %></li>
+    <li><b>Time Available Until:</b> <%= item.time_available %></li>
+    <li><b><%= item.user_id %></b></li>
+    <li><b><%= link_to 'Show', item %></b></li>
+    <li><b><%= link_to 'Edit', edit_item_path(item) %></b></li>
+    <li><b><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></b></li>
+  </ul>
+</div>
+<% end %>
+
